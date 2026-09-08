@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cart Engine Prototype</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <div class="app-container">
+    <!-- INPUT & STATE CONTROL PANEL -->
+    <section class="card">
+      <h2>1. State Controls</h2>
+      
+      <div class="form-group">
+        <label for="itemPrice">Unit Price ($)</label>
+        <input type="number" id="itemPrice" value="120" min="0" step="10" />
+      </div>
+
+      <div class="form-group">
+        <label for="itemQuantity">Quantity</label>
+        <input type="number" id="itemQuantity" value="4" min="1" />
+      </div>
+
+      <div class="toggle-group">
+        <label for="isPremium">Premium Member Perk</label>
+        <input type="checkbox" id="isPremium" checked />
+      </div>
+
+      <div class="toggle-group">
+        <label for="hasCoupon">Apply Promo Coupon (10% Off)</label>
+        <input type="checkbox" id="hasCoupon" checked />
+      </div>
+    </section>
+
+    <!-- LIVE COMPUTED SUMMARY PANEL -->
+    <section class="card">
+      <h2>2. Engine Output</h2>
+
+      <div class="summary-row">
+        <span>Subtotal</span>
+        <span id="outSubtotal">$0.00</span>
+      </div>
+
+      <div class="summary-row">
+        <span>Discount</span>
+        <span id="outDiscount">-$0.00</span>
+      </div>
+
+      <div class="summary-row">
+        <span>Shipping</span>
+        <span id="outShipping">$0.00</span>
+      </div>
+
+      <div class="summary-row">
+        <span>Tax (15% VAT)</span>
+        <span id="outTax">$0.00</span>
+      </div>
+
+      <div class="summary-row total">
+        <span>Grand Total</span>
+        <span id="outTotal">$0.00</span>
+      </div>
+
+      <div class="log-box" id="debugLog">Initializing engine...</div>
+    </section>
+  </div>
+
+  <!-- Load JavaScript Files as Native ES Modules -->
+  <script type="module" src="dist/app.js"></script>
+</body>
+</html>

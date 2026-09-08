@@ -1,0 +1,6 @@
+export const CONFIG = {
+    TAX_RATE: 0.15,
+    FREE_SHIPPING_THRESHOLD: 500,
+    STANDARD_SHIPPING_FEE: 35,
+    COUPON_RATE: 0.1
+};
